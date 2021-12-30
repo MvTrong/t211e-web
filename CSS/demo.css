@@ -18,8 +18,12 @@ p {
 
 
 
+
 }
 a{
     text-decoration: underline;
     text-transform: none;
+}
+p{
+    margin bottom 50px;
 }

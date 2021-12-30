@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo JS2</title>
+</head>
+<body>
+    <h1 id="title"> Xin chào cả lớp T2111E</h1>
+    <p id="para">
+        Barcelona đón 4 viện binh khủng tháng 1, Barcelona đón 4 viện binh khủng tháng 1,
+        Barcelona đón 4 viện binh khủng tháng 1, Barcelona đón 4 viện binh khủng tháng 1,
+    </p>
+    <script type="text/javascript">
+        var obj = {};
+        obj.name = "Lê Văn Hùng";// object.attribute = value
+        obj.age = 19 ;
+        obj.address = " 125 Quang Trung, Hoàn Kiếm ,HN";
+        console.log(obj);
+        var obj2 = {   // object = {
+            name:"Nguyễn Văn Khoa",
+            age:20,
+            address:"Số 8 Tôn Thất Thuyết", //attribute:value,
+            PID: 12321321321
+            tel: 0987654321,
+             khaibao: function (){
+              console.log("CCCD:"+this.PID+" tel: "+this.tel); //this đối tượng ngầm định bên trong khai báo
+          }
+        };// Khai báo
+        //console.log(obj2.name);
+        //obj2.khaibao(); // Thực hiện hành vi
+        //obj2.PID="123456789101";
+        obj2.khaibao(); // Thực hiện hành vi
+
+        // giả sử có 1 đối tượng khác giống hệt obj2
+        var obj3 = Object.create(obj2); // tạo 1 đối tượng từ mẫu obj2
+        obj3.PID = 1234556789;
+        obj3.khaibao();
+    </script>
+<script type="text/javascript">
+    // viết cript để tác động đến giao diện
+    // mỗi 1 phần tử bên  html sẽ luôn có 1 đối tượng (tham chiếu) bên JS
+    // cái mà  chúng ta nhìn thấy chính là các giá trị thuốc tính của đối tượng đó
+    var t = document.getElementById("title"); // DOM element - Document object model element
+   setTimeout(function (){
+        t.style.color = "red";
+    },3000);
+
+   var r = document.getElementById("para");
+   var f = false;
+   setInterval(function (){
+       if(f == false){
+           r.style.color = "green";
+           f = true;
+
+       }else{r.style.color = "blue";
+           f= false;
+       }
+   },1000);
+</script>
+
+</body>
+</html>

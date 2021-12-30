@@ -1,0 +1,80 @@
+*{
+    box-sizing: border-box;
+
+}
+body {
+    background-color: #fafafa;
+    color: #242424;
+    font-size: 14px;
+    line-height: 1.25;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif; /* font backup */
+    text-align: left;
+}
+div{
+    width: 350px;
+    height: 350px;
+    border: 1px solid #385838;
+    float: left;
+    margin: 10px 10px;/* có thể âm */
+    /*
+    1. giá trị đầu luôn là top
+    2. nhận giá trị theo chiều kim đồng hồ( top righ bot left )
+    3. Giá trị chiều bị thiếu sẽ lấy chiều ngược của nó
+     */
+    padding: 15px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #aaaaaa;
+
+}
+img{
+    max-width: 100%;
+
+}
+#tech{
+    background-color: orange;
+}
+.barca{
+    background-color: azure;
+
+}
+.mu{
+    color: goldenrod;
+}
+body .barca p{
+    color: goldenrod;
+}
+/* thứ tự ưu tiên tác dụng css
+1. thứ tự xuất hiện: xuất hiện sau cao hơn
+2. cha con -> thẻ
+3. dùng class
+4. cấu trúc cha con > class
+ */
+html body #demo  #p-demo{
+    color: dodgerblue;
+}
+.abc #p-demo{
+    color: darkblue;
+}
+.abc .p-demo{
+    color: violet;
+}
+.p-demo{
+    color: gold;
+
+}
+div p{
+    color: yellowg;
+}
+p{
+    color:  red;
+}
+p{
+    color: green;
+}
+.abc{
+    background-image: url("../IMGs/anh so 1.jpg");
+    background-size: cover;
+}
+
