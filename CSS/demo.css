@@ -1,0 +1,24 @@
+h1{
+    color: red;
+
+}
+p {
+    /*color: green;
+    color: rgb(0,255,255);*/
+    font-size: 20px;
+    font-weight: 400; /*100 200 300 400-NORMAL 500 600 700 800 900 */
+    text-align: left; /* left righ center justify */
+    line-height: 2.5; /*1.5 x 15px -> 22.5 px */
+    font-family: "Times New Roman";
+    text-decoration: none;
+    text-indent: 20px;
+    width: 600px;
+    background-color: #EEE8AA;
+    border-bottom: 10px dotted #DAA520; /*dasehed dotted */
+
+
+}
+a{
+    text-decoration: underline;
+    text-transform: none;
+}
