@@ -1,5 +1,5 @@
 h1{
-    color: red;
+    color: #ff001e;
 
 }
 p {
@@ -15,6 +15,7 @@ p {
     width: 600px;
     background-color: #EEE8AA;
     border-bottom: 10px dotted #DAA520; /*dasehed dotted */
+
 
 
 }
