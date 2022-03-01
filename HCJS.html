@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Multi Steps Form Widget Flat Responsive Widget Template </title>
+    <link href='//fonts.googleapis.com/css?family=Lato:400,100,100italic,300italic,300,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Fugaz+One' rel='stylesheet' type='text/css'>
+    <script src="js/jquery.js"></script>
+
+    <link type="text/css" rel="stylesheet" href="./vendors/bootstrap3.4.1/css/bootstrap.css">
+    <link type="text/css" rel="stylesheet" href="./css/HCJS.css">
+
+</head>
+<body>
+<div class="main">
+    <h1>Multi Steps Form Widget</h1>
+    <div class="content">
+        <div class="stepsForm">
+            <form method="post">
+                <div class="sf-steps">
+                    <div class="sf-steps-content">
+                        <div>
+                            <span></span> Profile
+                        </div>
+                        <div>
+                            <span></span> Account
+                        </div>
+                        <div>
+                            <span></span> Details
+                        </div>
+                        <div>
+                            <span></span> Profession
+                        </div>
+                    </div>
+                </div>
+                <div class="sf-steps-form sf-radius">
+
+                    <ul class="sf-content">
+                        <li>
+                            <div class="sf_columns column_3">
+                                <input type="text" name="name" placeholder="First Name" data-required="true">
+                            </div>
+                            <div class="sf_columns column_3">
+                                <input type="text" name="surname" placeholder="Last Name" data-required="true">
+                            </div>
+                        </li>
+                        <li>
+                            <div class="sf_columns column_3">
+                                <input type="text" placeholder="Phone" data-number="true">
+                            </div>
+
+                        </li>
+                        <li>
+                            <div class="sf_columns column_3">
+                                <div class="sf-radio">
+                                    Gender :
+                                    <label><input type="radio" value="M" name="gender" data-required="true"><span></span> Female</label>
+                                    <label><input type="radio" value="F" name="gender" data-required="true"><span></span> Male</label>
+                                </div>
+                            </div>
+
+                        </li>
+                        <li>
+                            <div class="sf_columns column_6">
+                                <textarea placeholder="Address" name="ADDRESS"></textarea>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                    <ul class="sf-content">
+                        <li>
+                            <div class="sf_columns column_3">
+                                <input type="text" placeholder="Username" data-required="true">
+                            </div>
+                            <div class="sf_columns column_3">
+                                <input type="text" placeholder="Email" data-required="true" data-email="true">
+                            </div>
+                        </li>
+                        <li>
+                            <div class="sf_columns column_3">
+                                <input type="password" placeholder="Password" data-required="true" data-confirm="true">
+                            </div>
+                            <div class="sf_columns column_3">
+                                <input type="password" placeholder="Re-Type Password" data-required="true" data-confirm="true">
+                            </div>
+                        </li>
+                        <li>
+                            <div class="sf_columns column_6">
+                                <div class="sf-check">
+                                    <label><input type="checkbox" value="test" name="test" data-required="true"><span></span> By checking this box, I agree to the Terms & Conditions & Privacy Policy.</label>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <ul class="sf-content">
+                        <li>
+                            <div class="sf_columns column_3">
+                                <label class="sf-select">
+                                    <select name="country" data-required="true">
+                                        <option value="" selected="selected" >Your Age</option>
+                                        <option value="de">0-17</option>
+                                        <option value="en">18-25</option>
+                                        <option value="us">25-50</option>
+                                    </select>
+                                    <span></span>
+                                </label>
+                            </div>
+                            <div class="sf_columns column_3">
+                                <label class="sf-select">
+                                    <select name="country" data-required="true">
+                                        <option value="" selected="selected" >Country</option>
+                                        <option value="de">India</option>
+                                        <option value="en">Britian</option>
+                                        <option value="us">China</option>
+                                        <option value="tr">Turkey</option>
+                                        <option value="jp">Spain</option>
+                                    </select>
+                                    <span></span>
+                                </label>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="sf-content">
+                        <li>
+                            <div class="sf_columns column_3">
+                                <label class="sf-select">
+                                    <select name="country" data-required="true">
+                                        <option value="" selected="selected" >Profession</option>
+                                        <option value="de">Designer</option>
+                                        <option value="en">Officer</option>
+                                        <option value="us">Clerk</option>
+                                    </select>
+                                    <span></span>
+                                </label>
+                            </div>
+                            <div class="sf_columns column_6">
+                                <textarea placeholder="Address" name="ADDRESS"></textarea>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="sf-steps-navigation sf-align-right">
+                    <span id="sf-msg" class="sf-msg-error"></span>
+                    <button id="sf-prev" type="button" class="sf-button">Previous</button>
+                    <button id="sf-next" type="button" class="sf-button">Next</button>
+                </div>
+            </form>
+            <script>
+                $(document).ready(function(e) {
+
+                    $(".stepsForm").stepsForm({
+                        width			:'100%',
+                        active			:0,
+                        errormsg		:'Check faulty fields.',
+                        sendbtntext		:'Create Account',
+                    });
+
+                    $(".container .themes>span").click(function(e) {
+                        $(".container .themes>span").removeClass("selectedx");
+                        $(this).addClass("selectedx");
+                        $(".stepsForm").removeClass().addClass("stepsForm");
+                        $(".stepsForm").addClass("sf-theme-"+$(this).attr("data-value"));
+                    });
+                });
+            </script>
+        </div>
+    </div>
+</div>
+</body>
+</html>
